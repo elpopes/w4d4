@@ -18,3 +18,26 @@ describe "#my_uniq" do
         expect(my_uniq(arr)).to_not be(arr)
     end
 end
+
+describe "#two_sum" do
+    
+    # before(:each) { arr = [-1, 0, 1, 2, 3, -3]}
+    
+    it 'should return indices of pairs that sum to 0' do
+        expect(two_sum([-1, 0, 1, 2, 3, -3])).to eq([[0, 2], [4, 5]])
+    end
+
+
+    it 'indices should be ordered smallest to largest' do
+        expect(two_sum([-1, 0, 1, 2, 3, -3])).to eq([[0, 2], [4, 5]])
+    end
+
+    it 'smaller pairs should come before larger pairs' do 
+        expect(two_sum([-1, 0, 1, 2, 3, -3])).to eq([[0, 2], [4, 5]])
+    end
+
+    it 'should return array of unique indices' do
+        expect(two_sum([-1, 0, 1, 2, 3, -3])).to eq([[0, 2], [4, 5]])
+    end
+
+end
