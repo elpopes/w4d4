@@ -39,5 +39,29 @@ describe "#two_sum" do
     it 'should return array of unique indices' do
         expect(two_sum([-1, 0, 1, 2, 3, -3])).to eq([[0, 2], [4, 5]])
     end
+end
 
+describe "#my_transpose" do
+    let(:matrix_1) { 
+        [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ] }
+
+    let(:matrix_2) {
+        [
+            ["a","b"],
+            ["c","d"]
+        ]
+    }
+
+    before(:each) do
+        expect(matrix_1).not_to receive(:transpose)
+    end
+
+    it 'should return a transposed matrix of equal size' do 
+        expect(my_transpose(matrix_1)).to eq([[1, 4, 7], [2, 5, 8], [3, 6, 9]])
+        expect(my_transpose(matrix_2)).to eq([["a", "c"], ["b", "d"]])
+    end
 end

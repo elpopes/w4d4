@@ -18,3 +18,18 @@ def two_sum(arr)
     end
     new_array
 end
+
+def my_transpose(arr)
+    new_array = []
+
+    arr.each_with_index do |ele1, idx1|
+        sub_arr = []
+        arr.each_with_index do |ele2, idx2|
+            sub_arr << arr[idx2][idx1]
+        end
+        new_array << sub_arr
+    end
+
+    p new_array
+    new_array
+end
