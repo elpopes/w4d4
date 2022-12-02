@@ -65,3 +65,22 @@ describe "#my_transpose" do
         expect(my_transpose(matrix_2)).to eq([["a", "c"], ["b", "d"]])
     end
 end
+
+describe "#stock_picker" do
+    
+
+    let(:prices) {[3,1,2,5,9,8]}
+    
+    it 'should return the pair of days that yield greatest profit' do 
+        expect(stock_picker(prices)).to eq([1,4])
+    end
+
+    it 'should return smallest index first' do
+        expect(stock_picker(prices)).to_not eq([4,1])
+    end
+
+
+
+
+
+end

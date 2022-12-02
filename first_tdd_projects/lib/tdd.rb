@@ -30,6 +30,20 @@ def my_transpose(arr)
         new_array << sub_arr
     end
 
-    p new_array
+
     new_array
+end
+
+def stock_picker(prices)
+    max_profit = 0
+    days = []
+    prices.each_with_index do |p_1, d|
+        prices[d+1..-1].each do |p_2|
+            if p_2 - p_1 > max_profit
+                max_profit = p_2 - p_1 
+                days = [d, prices.index(p_2)]
+            end
+        end
+    end
+    days
 end
